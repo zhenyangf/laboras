@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fms.fxController.MainFinanceManagementWindow">
+   <children>
+      <HBox layoutX="-2.0" layoutY="33.0" prefHeight="368.0" prefWidth="600.0">
+         <children>
+            <TreeView fx:id="categoryTree" prefHeight="200.0" prefWidth="200.0" />
+            <VBox prefHeight="368.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" onAction="#showAllUsers" text="Show all users" />
+                  <Pane prefHeight="43.0" prefWidth="100.0" />
+                  <Button onAction="#addCategory" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Add category" />
+                  <Button onAction="#addIncome" mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Add income" />
+                  <Button onAction="#addExpense" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Add expense" />
+                  <Button onAction="#deleteCategory" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Delete Category" />
+               </children>
+            </VBox>
+            <TableView prefHeight="368.0" prefWidth="300.0" fx:id="financeTable">
+            </TableView>
+         </children>
+      </HBox>
+      <MenuBar layoutX="-2.0" layoutY="2.0" prefHeight="31.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
